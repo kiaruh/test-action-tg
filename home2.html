@@ -11,18 +11,20 @@
 
   <h1 class="titulo">something Page 2</h1>
   <a href="home1.html"> page 1</a>
- <button id="BuyButton2" onclick='actionTag()' >Click me</button>
+ <button id="BuyButton2" onclick='actionTagTest()' >Click me</button>
+
+ <a href="#" onclick='actionTagTest()' >bla bla bla</a>
 </body>
 
 <!-- The action tag -->
 <script>    
-    function actionTag() {
+    function actionTagTest() {
         var _tvq = window._tvq = window._tvq || [];
        (function() {
            var session = {
                'user': '<USERREF>'
            };
-           var actionname = 'kpi1';
+           var actionname = 'bookanappointment';
            var action = {
                '': '', //USING THE CONSOLE LOG PATH
            };

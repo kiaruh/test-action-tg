@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Action tag testing</title>
+</head>
+<body>
+
+  <h1 class="titulo">Something Page 1</h1>
+
+  <a href="home2.html"> page 2</a>
+ <button id="BuyButton">Click me</button>
+</body>
+
+<!-- The action tag -->
+<script type="text/javascript" src="actionTag.js"></script> 
+<!-- The action tag -->
+
+<!-- Begin TVSquared Tracking Code -->
+<script type="text/javascript">
+  var _tvq = window._tvq = window._tvq || [];
+  (function() {
+      var session = {
+          'user': '<USERREF>'
+      };
+      var actionname = 'Visiting the test page with the client';
+      var action = {
+          'The visited Path': document.location.href, //USING THE CONSOLE LOG PATH
+         
+      };
+
+      var u = (("https:" == document.location.protocol) ? "https://collector-25922.tvsquared.com/" : "http://collector-25922.tvsquared.com/");
+      _tvq.push(['setSiteId', "TV-7245097272-1"]);
+      _tvq.push(['setTrackerUrl', u + 'tv2track.php']);
+      _tvq.push([function() {
+          this.setCustomVariable(5, 'session', JSON2.stringify(session), 'visit')
+      }]);
+      _tvq.push([function() {
+          this.setCustomVariable(5, actionname, JSON2.stringify(action), 'page')
+      }]);
+      _tvq.push(['trackPageView']);
+      var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.defer = true;
+      g.async = true;
+      g.src = u + 'tv2track.js';
+      s.parentNode.insertBefore(g, s);
+      console.log(document.location.href)//LOGGING THE PATH
+  })();
+</script>
+<!-- End TVSquared Tracking Code -->
+</html>
